@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_rectangle/home_page.dart';
     
 void main(){
   runApp(myApp());
@@ -9,19 +10,8 @@ class myApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int days = 34;
-    String name = "Coddepur";
-    double pi = 3.14;
-    bool isMale = true;
-
     return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("Welcome to $days days of Flutter by $name"),
-          ),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
