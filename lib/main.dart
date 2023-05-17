@@ -1,10 +1,10 @@
-import 'dart:ui';
+// import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:hello_rectangle/pages/home_page.dart';
 import 'package:hello_rectangle/pages/login_page.dart';
-    
-void main(){
+
+void main() {
   runApp(MyApp());
 }
 
@@ -19,12 +19,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       darkTheme: ThemeData(brightness: Brightness.dark),
       routes: {
-        "/" : (context) => LoginPage(),
-        "/home" : (context) => HomePage(),
-        "/login" : (context) => LoginPage(),
+        "/": (context) => HomePage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
       },
     );
   }
 }
-
-    
