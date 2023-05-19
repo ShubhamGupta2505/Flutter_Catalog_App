@@ -80,7 +80,8 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         decoration: BoxDecoration(
                             color: Colors.deepPurple,
-                            borderRadius: BorderRadius.circular(8)),
+                            borderRadius:
+                                BorderRadius.circular(changeButton ? 20 : 8)),
                       ),
                     )
                     // ElevatedButton(
