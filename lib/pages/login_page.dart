@@ -80,6 +80,9 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         decoration: BoxDecoration(
                             color: Colors.deepPurple,
+                            // shape: changeButton
+                            // ? BoxShape.circle
+                            // : BoxShape.rectangle,
                             borderRadius:
                                 BorderRadius.circular(changeButton ? 20 : 8)),
                       ),
