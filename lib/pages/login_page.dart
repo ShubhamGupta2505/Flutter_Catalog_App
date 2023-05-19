@@ -2,6 +2,7 @@
 // import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:hello_rectangle/utils/routes.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatelessWidget {
@@ -48,7 +49,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        print("Hi Codepur");
+                        Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
                       child: Text("Login"),
                       style: TextButton.styleFrom(minimumSize: Size(150, 40)),
