@@ -44,14 +44,14 @@ class LoginPage extends StatelessWidget {
                           hintText: "Enter password", labelText: "Password"),
                     ),
                     SizedBox(
-                      height: 20.0,
+                      height: 40.0,
                     ),
                     ElevatedButton(
                       onPressed: () {
                         print("Hi Codepur");
                       },
                       child: Text("Login"),
-                      style: TextButton.styleFrom(),
+                      style: TextButton.styleFrom(minimumSize: Size(150, 40)),
                     )
                   ],
                 ),
