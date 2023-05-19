@@ -5,8 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:hello_rectangle/utils/routes.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +30,7 @@ class LoginPage extends StatelessWidget {
                 height: 20.0,
               ),
               Text(
-                "Welcome",
+                "Welcome $name",
                 // style: GoogleFonts.lato(),
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
@@ -38,6 +45,10 @@ class LoginPage extends StatelessWidget {
                     TextFormField(
                       decoration: InputDecoration(
                           hintText: "Enter Username", labelText: "Username"),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
                     ),
                     TextFormField(
                       obscureText: true,
