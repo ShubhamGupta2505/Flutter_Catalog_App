@@ -14,6 +14,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String name = "";
+  bool changeButton = false;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +63,8 @@ class _LoginPageState extends State<LoginPage> {
                       onTap: () {
                         Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
-                      child: Container(
+                      child: AnimatedContainer(
+                        duration: Duration(seconds: 1),
                         height: 50,
                         width: 150,
                         alignment: Alignment.center,
