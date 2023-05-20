@@ -8,19 +8,23 @@ class MyDrawer extends StatelessWidget {
     final imageUrl =
         "https://github.com/ShubhamGupta2505/React_Starter_Basic/blob/main/nick.jpg?raw=true";
     return Drawer(
-      child: ListView(
-        children: [
-          DrawerHeader(
-              padding: EdgeInsets.zero,
-              child: UserAccountsDrawerHeader(
-                margin: EdgeInsets.zero,
-                accountName: Text("Shubham Gupta"),
-                accountEmail: Text("shubham3nemo@gmail.com"),
-                currentAccountPicture: CircleAvatar(
-                  backgroundImage: NetworkImage(imageUrl),
-                ),
-              ))
-        ],
+      child: Container(
+        color: Colors.deepPurple,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+                padding: EdgeInsets.zero,
+                child: UserAccountsDrawerHeader(
+                  margin: EdgeInsets.zero,
+                  accountName: Text("Shubham Gupta"),
+                  accountEmail: Text("shubham3nemo@gmail.com"),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: NetworkImage(imageUrl),
+                  ),
+                ))
+          ],
+        ),
       ),
     );
   }
