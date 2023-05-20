@@ -17,6 +17,17 @@ class _LoginPageState extends State<LoginPage> {
   bool changeButton = false;
   final _formKey = GlobalKey<FormState>();
 
+  movetoHome(BuildContext context) async {
+    setState(() {
+      changeButton = true;
+    });
+    await Future.delayed(Duration(seconds: 1));
+    await Navigator.pushNamed(context, MyRoutes.homeRoute);
+    setState(() {
+      changeButton = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -64,17 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Material(
                         child: InkWell(
-                          onTap: () async {
-                            setState(() {
-                              changeButton = true;
-                            });
-                            await Future.delayed(Duration(seconds: 1));
-                            await Navigator.pushNamed(
-                                context, MyRoutes.homeRoute);
-                            setState(() {
-                              changeButton = true;
-                            });
-                          },
+                          onTap: () => movetoHome(context),
                           child: AnimatedContainer(
                             duration: Duration(seconds: 1),
                             height: 50,
@@ -99,13 +100,6 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       )
-                      // ElevatedButton(
-                      //   onPressed: () {
-                      //     Navigator.pushNamed(context, MyRoutes.homeRoute);
-                      //   },
-                      //   child: Text("Login"),
-                      //   style: TextButton.styleFrom(minimumSize: Size(150, 40)),
-                      // )
                     ],
                   ),
                 )
