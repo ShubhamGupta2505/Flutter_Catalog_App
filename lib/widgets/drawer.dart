@@ -6,7 +6,11 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(),
+      child: ListView(
+        children: [
+          DrawerHeader(child: child)
+        ],
+      ),
     );
   }
 }
