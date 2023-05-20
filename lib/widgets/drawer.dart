@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -22,7 +23,17 @@ class MyDrawer extends StatelessWidget {
                   currentAccountPicture: CircleAvatar(
                     backgroundImage: NetworkImage(imageUrl),
                   ),
-                ))
+                )),
+            ListTile(
+              leading: Icon(
+                CupertinoIcons.home,
+                color: Colors.white,
+              ),
+              title: Text(
+                "Home",
+                style: TextStyle(color: Colors.white),
+              ),
+            )
           ],
         ),
       ),
