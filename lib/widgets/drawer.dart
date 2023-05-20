@@ -48,11 +48,11 @@ class MyDrawer extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(
-                CupertinoIcons.home,
+                CupertinoIcons.mail,
                 color: Colors.white,
               ),
               title: Text(
-                "Home",
+                "Email me",
                 textScaleFactor: 1.2,
                 style: TextStyle(color: Colors.white),
               ),
