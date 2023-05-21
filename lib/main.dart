@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_rectangle/pages/home_page.dart';
 import 'package:hello_rectangle/pages/login_page.dart';
 import 'package:hello_rectangle/utils/routes.dart';
+import 'package:hello_rectangle/widgets/themes.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -20,17 +21,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        // fontFamily: GoogleFonts.lato().fontFamily,
-        appBarTheme: AppBarTheme(
-          color: Colors.white,
-          elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black),
-        ),
-        // textTheme: Theme.of(context).textTheme
-      ),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
 
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
