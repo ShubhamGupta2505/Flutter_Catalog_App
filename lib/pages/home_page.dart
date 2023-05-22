@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hello_rectangle/models/catalog.dart';
-
+import 'dart:convert';
 import '../widgets/drawer.dart';
 import '../widgets/item_widget.dart';
 
@@ -22,8 +22,11 @@ class _HomePageState extends State<HomePage> {
     loadData();
   }
 
-  loadData() {
-    rootBundle.loadString("assets/files/catalog.json");
+  loadData() async {
+    final catalogJson =
+        await rootBundle.loadString("assets/files/catalog.json");
+    final decodedData = jsonDecode(catalogJson);
+    var productsData = decodedData['products'];
   }
 
   @override
