@@ -10,6 +10,8 @@ class ItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile();
+    return ListTile(
+      leading: Image.network(item.image),
+    );
   }
 }
