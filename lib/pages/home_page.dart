@@ -1,6 +1,7 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hello_rectangle/models/catalog.dart';
 
 import '../widgets/drawer.dart';
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() {
-    
+    rootBundle.loadString("assets/files/catalog.json");
   }
 
   @override
