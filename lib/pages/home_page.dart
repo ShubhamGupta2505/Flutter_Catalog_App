@@ -27,12 +27,14 @@ class _HomePageState extends State<HomePage> {
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData['products'];
-    print(productsData);
+    CatalogModel.items = List.from(productsData)
+        .map<Item>((item) => Item.fromMap(item))
+        .toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(12, (index) => CatalogModel.items[0]);
+    // final dummyList = List.generate(12, (index) => CatalogModel.items[0]);
     int days = 34;
     String name = "Coddepur";
 
@@ -46,10 +48,10 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
-          itemCount: dummyList.length,
+          itemCount: CatalogModel.items.length,
           itemBuilder: (context, index) {
             return ItemWidget(
-              item: dummyList[index],
+              item: CatalogModel.items[index],
             );
           },
         ),
