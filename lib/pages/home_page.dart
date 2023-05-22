@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(50, (index) => CatalogModel.items[0]);
+    final dummyList = List.generate(12, (index) => CatalogModel.items[0]);
     int days = 34;
     String name = "Coddepur";
     return Scaffold(
@@ -24,10 +24,10 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
-          itemCount: CatalogModel.items.length,
+          itemCount: dummyList.length,
           itemBuilder: (context, index) {
             return ItemWidget(
-              item: CatalogModel.items[index],
+              item: dummyList[index],
             );
           },
         ),
