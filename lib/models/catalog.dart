@@ -26,4 +26,9 @@ class Item {
       required this.price,
       required this.color,
       required this.image});
+
+
+      Item.fromMap(Map<String,dynamic> map) {
+        
+      }
 }
