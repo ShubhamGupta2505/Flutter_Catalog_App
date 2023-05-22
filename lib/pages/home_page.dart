@@ -27,6 +27,7 @@ class _HomePageState extends State<HomePage> {
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData['products'];
+    print(productsData);
   }
 
   @override
