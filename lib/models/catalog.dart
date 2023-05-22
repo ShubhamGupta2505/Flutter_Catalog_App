@@ -1,5 +1,13 @@
+class ClassName {
+  
+}
+
+
+
+
+
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
@@ -17,7 +25,7 @@ class Item {
 
 final products = [
   Item(
-      id: "Codepur001",
+      id: 1,
       name: "iPhone 12 Pro",
       desc: "Apple iPhone 12th generation",
       price: 999,
