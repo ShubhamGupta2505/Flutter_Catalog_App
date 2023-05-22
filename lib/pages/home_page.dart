@@ -18,10 +18,10 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Container(
-        height: 100,
-        width: 100,
-        color: Colors.green,
+      body: Center(
+        child: Container(
+          child: Text(context.runtimeType.toString()),
+        ),
       ),
       drawer: MyDrawer(),
     );
