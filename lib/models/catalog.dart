@@ -1,5 +1,5 @@
 class CatalogModel {
-  final products = [
+  final items = [
     Item(
         id: 1,
         name: "iPhone 12 Pro",
