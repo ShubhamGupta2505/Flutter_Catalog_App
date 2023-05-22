@@ -30,6 +30,8 @@ class _HomePageState extends State<HomePage> {
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
+
+    setState(() {});
   }
 
   @override
