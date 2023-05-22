@@ -13,6 +13,7 @@ class ItemWidget extends StatelessWidget {
     return ListTile(
       leading: Image.network(item.image),
       title: Text(item.name),
+      subtitle: Text(item.desc),
     );
   }
 }
