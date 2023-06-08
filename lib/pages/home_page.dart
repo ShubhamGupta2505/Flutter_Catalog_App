@@ -65,9 +65,14 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10)),
                       child: GridTile(
                         header: Container(
-                          child: Text(item.name),
+                          child: Text(
+                            item.name,
+                            style: TextStyle(color: Colors.white),
+                          ),
                           padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(),
+                          decoration: BoxDecoration(
+                            color: Colors.deepPurple,
+                          ),
                         ),
                         child: Image.network(item.image),
                         footer: Text(item.price.toString()),
