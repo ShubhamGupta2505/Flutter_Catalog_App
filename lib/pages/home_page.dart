@@ -57,7 +57,11 @@ class _HomePageState extends State<HomePage> {
                 ),
                 itemBuilder: (context, index) {
                   final item = CatalogModel.items[index];
-                  return GridTile(child: Image.network(item.image));
+                  return Card(
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      child: GridTile(child: Image.network(item.image)));
                 },
                 itemCount: CatalogModel.items.length,
               )
