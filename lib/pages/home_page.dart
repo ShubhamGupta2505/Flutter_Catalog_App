@@ -54,6 +54,8 @@ class _HomePageState extends State<HomePage> {
             ? GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
                 ),
                 itemBuilder: (context, index) {
                   final item = CatalogModel.items[index];
@@ -62,7 +64,11 @@ class _HomePageState extends State<HomePage> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                       child: GridTile(
-                        header: Text(item.name),
+                        header: Container(
+                          child: Text(item.name),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(),
+                        ),
                         child: Image.network(item.image),
                         footer: Text(item.price.toString()),
                       ));
