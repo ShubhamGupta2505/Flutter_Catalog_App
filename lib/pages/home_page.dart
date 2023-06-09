@@ -42,23 +42,24 @@ class _HomePageState extends State<HomePage> {
     // final dummyList = List.generate(12, (index) => CatalogModel.items[0]);
 
     return Scaffold(
+        backgroundColor: MyTheme.creamColor,
         body: SafeArea(
-      child: Container(
-        padding: Vx.m32,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CatalogHeader(),
-            if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-              CatalogList().expand()
-            else
-              Center(
-                child: CircularProgressIndicator(),
-              )
-          ],
-        ),
-      ),
-    ));
+          child: Container(
+            padding: Vx.m32,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CatalogHeader(),
+                if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+                  CatalogList().expand()
+                else
+                  Center(
+                    child: CircularProgressIndicator(),
+                  )
+              ],
+            ),
+          ),
+        ));
   }
 }
 
@@ -98,6 +99,9 @@ class CatalogItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return VxBox().white.square(200).make();
+    return VxBox(
+        child: Row(
+      children: [Image.network(catalog.image)],
+    )).white.square(100).make().py16();
   }
 }
