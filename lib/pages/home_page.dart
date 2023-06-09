@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     // final dummyList = List.generate(12, (index) => CatalogModel.items[0]);
-    int days = 34;
+
     String name = "Coddepur";
 
     return Scaffold(
