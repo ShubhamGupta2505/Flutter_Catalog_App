@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hello_rectangle/models/catalog.dart';
+import 'package:hello_rectangle/widgets/themes.dart';
 import 'dart:convert';
 import '../widgets/drawer.dart';
 import '../widgets/item_widget.dart';
@@ -43,9 +44,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         body: SafeArea(
       child: Container(
+        padding: Vx.m32,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            "Catalog App".text.make(),
+            "Catalog App".text.xl5.bold.color(MyTheme.darkBluisColor).make(),
+            "Trending Products".text.xl2.make(),
           ],
         ),
       ),
