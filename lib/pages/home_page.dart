@@ -39,8 +39,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // final dummyList = List.generate(12, (index) => CatalogModel.items[0]);
 
-    String name = "Coddepur";
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
