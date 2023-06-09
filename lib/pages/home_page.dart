@@ -105,7 +105,21 @@ class CatalogItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return VxBox(
         child: Row(
-      children: [CatalogImage(image: catalog.image)],
+      children: [
+        CatalogImage(image: catalog.image),
+        Expanded(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            catalog.name.text.lg.color(MyTheme.darkBluisColor).bold.make(),
+            catalog.desc.text.textStyle(context.captionStyle).make(),
+            ButtonBar(
+              children: ["\$${catalog.price}".text.xl.bold.make()],
+            )
+          ],
+        ))
+      ],
     )).white.roundedLg.square(150).make().py16();
   }
 }
