@@ -45,7 +45,18 @@ class _HomePageState extends State<HomePage> {
         body: SafeArea(
       child: Container(
         padding: Vx.m32,
-        child: CatalogHeader(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CatalogHeader(),
+            if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+              CatalogList().expand()
+            else
+              Center(
+                child: CircularProgressIndicator(),
+              )
+          ],
+        ),
       ),
     ));
   }
@@ -63,5 +74,30 @@ class CatalogHeader extends StatelessWidget {
         "Trending Products".text.xl2.make(),
       ],
     );
+  }
+}
+
+class CatalogList extends StatelessWidget {
+  const CatalogList({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        shrinkWrap: true,
+        itemBuilder: (context, index) {
+          final catalog = CatalogModel.items[index];
+          return CatalogItem(catalog: catalog);
+        },
+        itemCount: CatalogModel.items.length);
+  }
+}
+
+class CatalogItem extends StatelessWidget {
+  final Item catalog;
+  const CatalogItem({Key? key, required this.catalog}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return VxBox().white.square(200).make();
   }
 }
