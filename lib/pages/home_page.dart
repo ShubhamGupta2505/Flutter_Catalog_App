@@ -6,6 +6,7 @@ import 'package:hello_rectangle/models/catalog.dart';
 import 'dart:convert';
 import '../widgets/drawer.dart';
 import '../widgets/item_widget.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -40,12 +41,6 @@ class _HomePageState extends State<HomePage> {
     // final dummyList = List.generate(12, (index) => CatalogModel.items[0]);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Catalog App",
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
