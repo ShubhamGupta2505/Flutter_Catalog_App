@@ -20,9 +20,7 @@ class CatalogList extends StatelessWidget {
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => HomeDetailPage(catalog: catalog)
-                      )
-                      ),
+                      builder: (context) => HomeDetailPage(catalog: catalog))),
               child: CatalogItem(catalog: catalog));
         },
         itemCount: CatalogModel.items.length);
@@ -38,7 +36,9 @@ class CatalogItem extends StatelessWidget {
     return VxBox(
         child: Row(
       children: [
-        CatalogImage(image: catalog.image),
+        Hero(
+            tag: Key(catalog.id.toString()),
+            child: CatalogImage(image: catalog.image)),
         Expanded(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
