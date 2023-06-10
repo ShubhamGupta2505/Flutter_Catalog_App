@@ -6,6 +6,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hello_rectangle/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:hello_rectangle/models/catalog.dart';
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: MyTheme.creamColor,
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
           backgroundColor: MyTheme.darkBluisColor,
           child: Icon(CupertinoIcons.cart),
         ),

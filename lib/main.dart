@@ -3,6 +3,7 @@
 // import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:hello_rectangle/pages/cart_page.dart';
 import 'package:hello_rectangle/pages/home_page.dart';
 import 'package:hello_rectangle/pages/login_page.dart';
 import 'package:hello_rectangle/utils/routes.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.cartRoute: (context) => CartPage(),
       },
     );
   }
