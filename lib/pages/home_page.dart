@@ -12,8 +12,8 @@ import 'package:hello_rectangle/widgets/themes.dart';
 
 import '../widgets/drawer.dart';
 import '../widgets/item_widget.dart';
-import 'home_widgets/catalog_header.dart';
-import 'home_widgets/catalog_list.dart';
+import '../widgets/home_widgets/catalog_header.dart';
+import '../widgets/home_widgets/catalog_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
