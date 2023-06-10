@@ -3,6 +3,7 @@
 
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -49,6 +50,11 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
         backgroundColor: MyTheme.creamColor,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: MyTheme.darkBluisColor,
+          child: Icon(CupertinoIcons.cart),
+        ),
         body: SafeArea(
           child: Container(
             padding: Vx.m32,
