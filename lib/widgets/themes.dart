@@ -6,7 +6,7 @@ class MyTheme {
         primarySwatch: Colors.deepPurple,
         cardColor: Colors.white,
         canvasColor: creamColor,
-        
+
         buttonTheme: ButtonThemeData(buttonColor: darkBluisColor),
         // fontFamily: GoogleFonts.lato().fontFamily,
         appBarTheme: AppBarTheme(
