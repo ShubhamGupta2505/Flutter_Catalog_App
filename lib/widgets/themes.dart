@@ -6,6 +6,7 @@ class MyTheme {
         primarySwatch: Colors.deepPurple,
         cardColor: Colors.white,
         canvasColor: creamColor,
+        
         buttonTheme: ButtonThemeData(buttonColor: darkBluisColor),
         // fontFamily: GoogleFonts.lato().fontFamily,
         appBarTheme: AppBarTheme(
@@ -24,7 +25,7 @@ class MyTheme {
         appBarTheme: AppBarTheme(
           color: Colors.black,
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.white),
         ),
         // textTheme: Theme.of(context).textTheme
       );
